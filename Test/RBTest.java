@@ -1,4 +1,4 @@
-public class Test {
+public class RBTest {
     @org.junit.Test
     public void RBtoString(){
 
