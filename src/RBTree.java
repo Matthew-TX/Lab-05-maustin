@@ -31,6 +31,7 @@ public class RBTree {
         z.setLeftChild(nil);
         z.setRightChild(nil);
         z.setColor(red);
+        InsertFixUp(z);
     }
 
     public void InsertFixUp (Node z){
