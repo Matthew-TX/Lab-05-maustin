@@ -116,5 +116,8 @@ public class RBTree {
         x.setParent(y);
     }
 
+    public void Find(int value){
+
+    }
 
 }
