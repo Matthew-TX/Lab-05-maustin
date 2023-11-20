@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6a2fb5-fe76-4065-9733-4b3e983885e4" name="Changes" comment="Creating RBTree Class">
+    <list default="true" id="ea6a2fb5-fe76-4065-9733-4b3e983885e4" name="Changes" comment="Creating Fix up Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RBTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="FixUp" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +46,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "RBTreeBranch",
+    "git-widget-placeholder": "Left__Rotate",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -104,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700436556819</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Creating Fix up Function">
+      <created>1700438250306</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700438250306</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,7 +124,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="RBTreeBranch" />
+                        <option value="Left_Rotate" />
                       </list>
                     </value>
                   </entry>
@@ -136,6 +142,7 @@
     <MESSAGE value="Insert, Find, and Delete Tests" />
     <MESSAGE value="Hello World" />
     <MESSAGE value="Creating RBTree Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating RBTree Class" />
+    <MESSAGE value="Creating Fix up Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating Fix up Function" />
   </component>
 </project>

@@ -48,7 +48,30 @@ public class RBTree {
         z.setLeftChild(nil);
         z.setRightChild(nil);
         z.setColor("red");
+    }
 
+    public void InsertFixUp (Node z){
+
+    }
+
+    public void leftRotate(Node x){
+        Node y = x.getRightChild();
+        x.setRightChild(y.getLeftChild());
+        if (y.getLeftChild() != nil){
+            y.getLeftChild().setParent(x);
+        }
+        y.setParent(x.getParent());
+        if(x.getParent() == nil){
+            root = y;
+        }
+        else if (x == x.getParent().getLeftChild()){
+            x.getParent().setLeftChild(y);
+        }
+        else {
+            x.getParent().setRightChild(y);
+        }
+        y.setLeftChild(x);
+        x.setParent(y);
     }
 
 }
