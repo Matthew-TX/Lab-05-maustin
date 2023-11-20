@@ -74,4 +74,24 @@ public class RBTree {
         x.setParent(y);
     }
 
+    public void rightRotate(Node x){
+        Node y = x.getLeftChild();
+        x.setLeftChild(y.getRightChild());
+        if (y.getRightChild() != nil){
+            y.getRightChild().setParent(x);
+        }
+        y.setParent(x.getParent());
+        if(x.getParent() == nil){
+            root = y;
+        }
+        else if (x == x.getParent().getRightChild()){
+            x.getParent().setRightChild(y);
+        }
+        else {
+            x.getParent().setLeftChild(y);
+        }
+        y.setRightChild(x);
+        x.setParent(y);
+    }
+
 }
