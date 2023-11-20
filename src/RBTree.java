@@ -1,5 +1,10 @@
 public class RBTree {
-    Node nil = null;
+    Node nil = new Node();
+
+    public RBTree() {
+        nil.setKey(null);
+    }
+
     Node root = null;
     String red = "red";
     String black = "black";
@@ -116,8 +121,32 @@ public class RBTree {
         x.setParent(y);
     }
 
-    public void Find(int value){
-
+    public Boolean Find(int value){
+        Node current = root;
+        boolean found = false;
+        boolean search = false;
+        while (!search){
+            if ( value < current.getKey()){
+                if (current.getLeftChild().getKey() != null){
+                    current = current.getLeftChild();
+                }
+                else {
+                    search = true;
+                }
+            }
+            else if (value > current.getKey()){
+                if (current.getRightChild().getKey() != null){
+                    current = current.getRightChild();
+                }
+                else {
+                    search = true;
+                }
+            }
+            else{
+                found = true;
+            }
+        }
+        return found;
     }
 
 }
