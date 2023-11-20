@@ -34,7 +34,45 @@ public class RBTree {
     }
 
     public void InsertFixUp (Node z){
-
+        while (z.getParent().getColor().equals(red)){
+            if(z.getParent() == z.getParent().getParent().getLeftChild()){
+                Node y = z.getParent().getParent().getRightChild();
+                if ( y.getColor().equals(red)){
+                    z.getParent().setColor(black);
+                    y.setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    z = z.getParent().getParent();
+                }
+                else{
+                    if ( z == z.getParent().getRightChild()){
+                        z = z.getParent();
+                        leftRotate(z);
+                    }
+                    z.getParent().setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    rightRotate(z.getParent().getParent());
+                }
+            }
+            else{
+                Node y = z.getParent().getParent().getLeftChild();
+                if ( y.getColor().equals(red)){
+                    z.getParent().setColor(black);
+                    y.setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    z = z.getParent().getParent();
+                }
+                else{
+                    if (z == z.getParent().getLeftChild()){
+                        z = z.getParent();
+                        rightRotate(z);
+                    }
+                    z.getParent().setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    leftRotate(z.getParent().getParent());
+                }
+            }
+        }
+        root.setColor(black);
     }
 
     public void leftRotate(Node x){
@@ -77,46 +115,5 @@ public class RBTree {
         x.setParent(y);
     }
 
-    public void fixup(Node z){
-        while (z.getParent().getColor().equals(red)){
-            if(z.getParent() == z.getParent().getParent().getLeftChild()){
-                Node y = z.getParent().getParent().getRightChild();
-                if ( y.getColor().equals(red)){
-                    z.getParent().setColor(black);
-                    y.setColor(black);
-                    z.getParent().getParent().setColor(red);
-                    z = z.getParent().getParent();
-                }
-                else{
-                    if ( z == z.getParent().getRightChild()){
-                        z = z.getParent();
-                        leftRotate(z);
-                    }
-                    z.getParent().setColor(black);
-                    z.getParent().getParent().setColor(red);
-                    rightRotate(z.getParent().getParent());
-                }
-            }
-            else{
-                Node y = z.getParent().getParent().getLeftChild();
-                if ( y.getColor().equals(red)){
-                    z.getParent().setColor(black);
-                    y.setColor(black);
-                    z.getParent().getParent().setColor(red);
-                    z = z.getParent().getParent();
-                }
-                else{
-                    if (z == z.getParent().getLeftChild()){
-                        z = z.getParent();
-                        rightRotate(z);
-                    }
-                    z.getParent().setColor(black);
-                    z.getParent().getParent().setColor(red);
-                    leftRotate(z.getParent().getParent());
-                }
-            }
-        }
-        root.setColor(black);
-    }
 
 }
