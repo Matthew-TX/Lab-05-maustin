@@ -1,6 +1,8 @@
 public class RBTree {
     Node nil = null;
     Node root = null;
+    String red = "red";
+    String black = "black";
 
     public void Insert(Integer zKey){
         Node z = new Node();
@@ -28,7 +30,7 @@ public class RBTree {
         }
         z.setLeftChild(nil);
         z.setRightChild(nil);
-        z.setColor("red");
+        z.setColor(red);
     }
 
     public void InsertFixUp (Node z){
@@ -73,6 +75,48 @@ public class RBTree {
         }
         y.setRightChild(x);
         x.setParent(y);
+    }
+
+    public void fixup(Node z){
+        while (z.getParent().getColor().equals(red)){
+            if(z.getParent() == z.getParent().getParent().getLeftChild()){
+                Node y = z.getParent().getParent().getRightChild();
+                if ( y.getColor().equals(red)){
+                    z.getParent().setColor(black);
+                    y.setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    z = z.getParent().getParent();
+                }
+                else{
+                    if ( z == z.getParent().getRightChild()){
+                        z = z.getParent();
+                        leftRotate(z);
+                    }
+                    z.getParent().setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    rightRotate(z.getParent().getParent());
+                }
+            }
+            else{
+                Node y = z.getParent().getParent().getLeftChild();
+                if ( y.getColor().equals(red)){
+                    z.getParent().setColor(black);
+                    y.setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    z = z.getParent().getParent();
+                }
+                else{
+                    if (z == z.getParent().getLeftChild()){
+                        z = z.getParent();
+                        rightRotate(z);
+                    }
+                    z.getParent().setColor(black);
+                    z.getParent().getParent().setColor(red);
+                    leftRotate(z.getParent().getParent());
+                }
+            }
+        }
+        root.setColor(black);
     }
 
 }
