@@ -4,7 +4,7 @@ public class RBTree {
     String red = "red";
     String black = "black";
 
-    public void Insert(Integer zKey){
+    public void Insert(int zKey){
         Node z = new Node();
         z.setKey(zKey);
         Node y = nil;
