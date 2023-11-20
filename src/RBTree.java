@@ -1,6 +1,6 @@
 public class RBTree {
     Node nil = new Node();
-
+    String inOrderString;
     public RBTree() {
         nil.setKey(null);
     }
@@ -147,6 +147,35 @@ public class RBTree {
             }
         }
         return found;
+    }
+
+    public String InOrderString(Node n) {
+        if (n!= null) {
+            if (n.getLeftChild()!= null) {
+                this.InOrderString(n.getLeftChild());
+            }
+
+            if (n.getKey() != null) {
+                inOrderString += n.getKey() + ",";
+            }
+
+            if (n.getRightChild()!= null) {
+                this.InOrderString(n.getRightChild());
+            }
+            n = root;
+            return inOrderString;
+        } else {
+            return null;
+        }
+
+    }
+
+    public String displayInOrder() {
+        String displayInOrder = this.InOrderString(root);
+        inOrderString = "";
+        return displayInOrder;
+    }
+
     }
 
 }
