@@ -1,20 +1,24 @@
 public class RBTree {
     Node nil = new Node();
-    String inOrderString;
-    public RBTree() {
-        nil.setKey(null);
-    }
-
-    Node root = null;
+    String inOrderString = "";
+    Node root = new Node();
     String red = "red";
     String black = "black";
 
-    public void Insert(int zKey){
+    public RBTree() {
+        nil.setKey(null);
+        nil.setColor(black);
+        root.setKey(null);
+        root.setColor(black);
+
+    }
+
+    public void insert(int zKey){
         Node z = new Node();
         z.setKey(zKey);
         Node y = nil;
         Node x = root;
-        while(x!=nil){
+        while(x.getKey()!= null){
             y = x;
             if(z.getKey() < x.getKey()){
                 x = x.getLeftChild();
@@ -36,10 +40,10 @@ public class RBTree {
         z.setLeftChild(nil);
         z.setRightChild(nil);
         z.setColor(red);
-        InsertFixUp(z);
+        insertFixUp(z);
     }
 
-    public void InsertFixUp (Node z){
+    public void insertFixUp(Node z){
         while (z.getParent().getColor().equals(red)){
             if(z.getParent() == z.getParent().getParent().getLeftChild()){
                 Node y = z.getParent().getParent().getRightChild();
@@ -156,7 +160,7 @@ public class RBTree {
             }
 
             if (n.getKey() != null) {
-                inOrderString += n.getKey() + ",";
+                inOrderString += "(" + n.getKey()  + "," + n.getColor() + ")" + " , ";
             }
 
             if (n.getRightChild()!= null) {
@@ -171,6 +175,7 @@ public class RBTree {
     }
 
     public String displayInOrder() {
+        inOrderString = "(Value,Color) : ";
         String displayInOrder = this.InOrderString(root);
         inOrderString = "";
         return displayInOrder;

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6a2fb5-fe76-4065-9733-4b3e983885e4" name="Changes" comment="Add Find">
+    <list default="true" id="ea6a2fb5-fe76-4065-9733-4b3e983885e4" name="Changes" comment="Add InOrderString">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/RBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/RBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RBTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "InOrderString",
+    "last_opened_file_path": "C:/Users/matth/Desktop/College/2023 Fall/Data Structures and Algorithms/Lab03/Lab-03-maustin",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -158,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700519733593</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add InOrderString">
+      <created>1700522284940</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700522284940</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add InOrderString">
+      <created>1700522307568</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700522307568</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +214,7 @@
     <MESSAGE value="Fixup" />
     <MESSAGE value="Insert Complete" />
     <MESSAGE value="Add Find" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Find" />
+    <MESSAGE value="Add InOrderString" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add InOrderString" />
   </component>
 </project>
