@@ -125,17 +125,20 @@ public class RBTree {
         x.setParent(y);
     }
 
-    public Boolean Find(int value){
+    public Boolean find(int value){
         Node current = root;
         boolean found = false;
-        boolean search = false;
-        while (!search){
-            if ( value < current.getKey()){
+        boolean search = true;
+        while (search){
+            if(root.getKey() == null){
+                search = false;
+            }
+           else if ( value < current.getKey()){
                 if (current.getLeftChild().getKey() != null){
                     current = current.getLeftChild();
                 }
                 else {
-                    search = true;
+                    search = false;
                 }
             }
             else if (value > current.getKey()){
@@ -143,11 +146,12 @@ public class RBTree {
                     current = current.getRightChild();
                 }
                 else {
-                    search = true;
+                    search = false;
                 }
             }
             else{
                 found = true;
+                search = false;
             }
         }
         return found;
