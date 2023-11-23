@@ -20,7 +20,7 @@ public class RBTest {
         tree.insert(1);
         tree.insert(0);
 
-        expected = "(Value,Color) : (0,red) , (1,black) , (2,red) , (4,black) , (5,black) , (7,red) , (9,red) , (10,black) , (11,red) , ";
+        expected = "(Value,Color) : (0,red) (1,black) (2,red) (4,black) (5,black) (7,red) (9,red) (10,black) (11,red) ";
         Assert.assertEquals(expected, tree.displayInOrder());
     }
 
@@ -43,7 +43,7 @@ public class RBTest {
         tree.insert(0);
 
         //Test Occupied Tree
-        expected = "(Value,Color) : (0,red) , (1,black) , (2,red) , (4,black) , (5,black) , (7,red) , (9,red) , (10,black) , (11,red) , ";
+        expected = "(Value,Color) : (0,red) (1,black) (2,red) (4,black) (5,black) (7,red) (9,red) (10,black) (11,red) ";
         Assert.assertEquals(expected, tree.displayInOrder());
     }
 
@@ -79,6 +79,25 @@ public class RBTest {
     }
     @org.junit.Test
     public void Delete(){
+        RBTree tree = new RBTree();
+        boolean t = true;
+        boolean f = false;
 
+        //Find after inserting a few more elements
+        tree.insert(10);
+        tree.insert(2);
+        tree.insert(4);
+        tree.insert(5);
+        tree.insert(9);
+        tree.insert(11);
+        tree.insert(7);
+        tree.insert(1);
+        tree.insert(0);
+
+        Assert.assertEquals(t, tree.find(9));
+        tree.delete(9);
+        Assert.assertEquals(f, tree.find(9));
+
+        System.out.println(tree.displayInOrder());
     }
 }
