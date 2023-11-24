@@ -97,7 +97,5 @@ public class RBTest {
         Assert.assertEquals(t, tree.find(9));
         tree.delete(9);
         Assert.assertEquals(f, tree.find(9));
-
-        System.out.println(tree.displayInOrder());
     }
 }

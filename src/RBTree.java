@@ -218,8 +218,6 @@ public class RBTree {
     }
 
     public void transplant(node u, node v){
-        System.out.println("v is " + root.getKey());
-
         if(u.getParent() == null){
             root = v;
 
@@ -261,7 +259,6 @@ public class RBTree {
         else{
             y = minimum(z.getRight());
             yOriginalColor = y.getColor();
-            System.out.println("y og is " + yOriginalColor);
             x = y.getRight();
             if(y.getParent() == z){
                 x.setParent(y);
@@ -275,10 +272,8 @@ public class RBTree {
             y.setLeft(z.getLeft());
             y.getLeft().setParent(y);
             y.setColor(z.getColor());
-            System.out.println(y.getColor() + y.getKey());
         }
         if(yOriginalColor.equals(black)){
-            System.out.println("entered");
         deleteFixUp(x);
         }
     }
