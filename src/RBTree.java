@@ -229,8 +229,6 @@ public class RBTree {
             u.getParent().setRight(v);
         }
 
-
-        System.out.println("v is " + root.getKey());
         v.setParent(u.getParent());
     }
 
